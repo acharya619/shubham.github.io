@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add sequential fadeIn animation to tech logos
+    // Add sequential shake animation to tech logos (was fadeIn)
     const techLogos = document.querySelectorAll('.tech-logo');
     techLogos.forEach((logo, index) => {
         logo.style.animationDelay = `${index * 0.1}s`;

@@ -683,7 +683,7 @@ footer p {
     border: 1px solid var(--border-color);
     width: 90px;
     height: 90px;
-    animation: fadeInUp 0.5s ease forwards;
+    animation: initial-shake 0.5s ease forwards;
     position: relative;
     overflow: visible;
 }
@@ -693,6 +693,29 @@ footer p {
     box-shadow: var(--glow);
     background: rgba(255, 255, 255, 0.1);
     animation: shake 0.5s ease infinite;
+}
+
+@keyframes initial-shake {
+    0% { 
+        opacity: 0;
+        transform: translateY(20px) rotate(0deg);
+    }
+    25% { 
+        opacity: 0.3;
+        transform: translateY(15px) rotate(-5deg);
+    }
+    50% { 
+        opacity: 0.6;
+        transform: translateY(10px) rotate(5deg);
+    }
+    75% { 
+        opacity: 0.8;
+        transform: translateY(5px) rotate(-3deg);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 @keyframes shake {
@@ -740,19 +763,8 @@ footer p {
 
 /* Animation for tech logos */
 .tech-logo {
-    animation: fadeInUp 0.5s ease forwards;
+    animation: initial-shake 0.5s ease forwards;
     opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .tech-logo:nth-child(1) { animation-delay: 0.1s; }
